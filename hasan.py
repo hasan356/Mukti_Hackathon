@@ -27,7 +27,8 @@ for names in list_of_all_names_of_pdf:
 	s2='/home/hasan/'
 	#src=s2+names
 	#dest=s2+'Student_Notice_Board'+names
-	#shutil.move(src,dest)			
+	#shutil.move(src,dest)
+	#change			
 		
 
 

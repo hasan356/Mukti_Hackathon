@@ -4,6 +4,7 @@ import requests
 import wget
 import shutil
 import os.path
+os.chdir('/home/hasan/Student_Notice_Board')
 site="http://nitdgp.ac.in/Student_Notice_Board.php"
 page = urllib.urlopen(site)
 soup=BeautifulSoup(page,'lxml')
@@ -19,16 +20,11 @@ for link in links:
 	if(url[length-1]=='f'):
 		name_of_file=link.text
 		completeName = os.path.join(save_path, name_of_file) 
-		list_of_all_names_of_pdf.append(url)
-		#wget.download(start+url)
+		list_of_all_names_of_pdf.append(link.text)
+		wget.download(start+url)
 
-for names in list_of_all_names_of_pdf:
-	print names
-	s2='/home/hasan/'
-	#src=s2+names
-	#dest=s2+'Student_Notice_Board'+names
-	#shutil.move(src,dest)
-	#change			
+
+		
 		
 
 
